@@ -1,22 +1,22 @@
 module.exports = (sequelize, Sequelize) => {
     const Phone = sequelize.define("phone", {
         id: {
-            type: Sequelize.INTEGER,
+            allowNull: false,
             autoIncrement: true,
             primaryKey: true,
-            allowNull: false
+            type: Sequelize.INTEGER
         },
         name: {
+            allowNull: false,
             type: Sequelize.STRING,
-            validate: { notEmpty: true }
         },
         number: {
+            allowNull: false,
             type: Sequelize.STRING,
-            validate: { notEmpty: true }
         },
         contactId: {
+            allowNull: false,
             type: Sequelize.INTEGER,
-            allowNull: false
         }
     });
   

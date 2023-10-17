@@ -1,14 +1,14 @@
 module.exports = (sequelize, Sequelize) => {
     const Contact = sequelize.define("contact", {
         id: {
-            type: Sequelize.INTEGER,
+            allowNull: false,
             autoIncrement: true,
             primaryKey: true,
-            allowNull: false
+            type: Sequelize.INTEGER
         },
         name: {
-            type: Sequelize.STRING,
-            validate: { notEmpty: true }
+            allowNull: false,
+            type: Sequelize.STRING
         }
     });
   
