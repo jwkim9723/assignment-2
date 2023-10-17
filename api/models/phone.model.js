@@ -4,18 +4,19 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true,
+            allowNull: false
         },
         name: {
             type: Sequelize.STRING,
-            allowNull: false,
+            validate: { notEmpty: true }
         },
         number: {
             type: Sequelize.STRING,
-            allowNull: false,
+            validate: { notEmpty: true }
         },
         contactId: {
             type: Sequelize.INTEGER,
-            allowNull: false,
+            allowNull: false
         }
     });
   
